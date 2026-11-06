@@ -52,3 +52,5 @@ tight-crop.mjs
 process-logos.mjs
 inspect-wordmark.mjs
 backup-project.mjs
+PUSH_TO_GITHUB.bat
+Launch_Website.bat
