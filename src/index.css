@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Base resets & overflow guards */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #070606;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area insets for notched mobile devices */
+.safe-pb {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+.safe-pt {
+  padding-top: env(safe-area-inset-top, 1rem);
+}
+
+/* ========================================================================== */
+/* AUTHENTIC APPLE-GRADE FROSTED GLASSMORHISM (macOS / iOS 18 / visionOS)    */
+/* ========================================================================== */
+
+/* Apple Glass Panel */
+.apple-glass-panel {
+  background: rgba(26, 20, 18, 0.58);
+  backdrop-filter: blur(28px) saturate(190%) contrast(105%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%) contrast(105%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    0 24px 48px -12px rgba(0, 0, 0, 0.85),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* Apple Floating Glass Pill */
+.apple-glass-pill {
+  background: rgba(24, 18, 16, 0.65);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 16px 40px -8px rgba(0, 0, 0, 0.75),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Apple Glass Interactive Card */
+.apple-glass-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 18, 15, 0.65) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    0 20px 45px -10px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 1.5px 0 rgba(0, 0, 0, 0.35);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-card:hover, .apple-glass-card:focus-within {
+  background: linear-gradient(135deg, rgba(255, 94, 14, 0.12) 0%, rgba(32, 22, 18, 0.75) 100%);
+  border-color: rgba(255, 120, 36, 0.45);
+  box-shadow: 
+    0 28px 60px -12px rgba(0, 0, 0, 0.9),
+    0 0 35px -5px rgba(255, 94, 14, 0.35),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 1.5px 0 rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Apple VisionOS Primary Glass Button (Glowing Refraction Glass) */
+.apple-glass-btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 120, 36, 0.9) 0%, rgba(220, 75, 5, 0.85) 100%);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 210, 180, 0.48);
+  box-shadow: 
+    0 12px 28px -6px rgba(255, 94, 14, 0.55),
+    0 0 24px rgba(255, 94, 14, 0.3),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-btn-primary:hover {
+  background: linear-gradient(180deg, rgba(255, 138, 56, 0.95) 0%, rgba(240, 90, 15, 0.9) 100%);
+  border-color: rgba(255, 230, 210, 0.65);
+  box-shadow: 
+    0 16px 36px -6px rgba(255, 94, 14, 0.75),
+    0 0 36px rgba(255, 94, 14, 0.5),
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.apple-glass-btn-primary:active {
+  transform: translateY(0.5px) scale(0.98);
+  box-shadow: 
+    0 6px 16px -4px rgba(255, 94, 14, 0.5),
+    inset 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Apple Frosted Secondary Glass Button */
+.apple-glass-btn-secondary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 
+    0 10px 24px -6px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-btn-secondary:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%);
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 
+    0 14px 30px -6px rgba(0, 0, 0, 0.75),
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.apple-glass-btn-secondary:active {
+  transform: translateY(0.5px) scale(0.98);
+}
+
+/* Dynamic Glass Button Light Sheen Sweep */
+.glass-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-shimmer:hover::after {
+  transform: rotate(25deg) translateX(360%);
+}
+
+/* Ambient Auto Shimmer */
+@keyframes ambientSheen {
+  0% {
+    transform: rotate(25deg) translateX(-200%);
+  }
+  30% {
+    transform: rotate(25deg) translateX(380%);
+  }
+  100% {
+    transform: rotate(25deg) translateX(380%);
+  }
+}
+
+.ambient-sheen-sweep::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 45%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  animation: ambientSheen 4.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apple Segmented Track */
+.apple-glass-track {
+  background: rgba(12, 9, 8, 0.75);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    inset 0 2px 6px rgba(0, 0, 0, 0.7),
+    0 12px 30px rgba(0, 0, 0, 0.65);
+}
+
+/* Recycled Theme Filter: Turns Blue Network Globe into Warm Orange Network Globe */
+.network-globe-orange {
+  filter: hue-rotate(168deg) saturate(2.2) brightness(1.15) contrast(1.12);
+  mix-blend-mode: screen;
+}
+
+/* Text Gradients */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FFFFFF 15%, #FFA870 65%, #FF5E0E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile glass optimizations */
+@media (max-width: 640px) {
+  .apple-glass-panel, .apple-glass-card {
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+  }
+}
+
+/* Signal Travelling Animation in Simulation */
+@keyframes travelSignal {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(250%);
+    opacity: 0;
+  }
+}
+
+/* Reduced Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070606;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 94, 14, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 94, 14, 0.6);
+}
